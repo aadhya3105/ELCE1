@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+</head>
+<body>
+  <center>
+    <h2>Student Registration Form</h2>
+    <hr>
+  </center>
+
+  <form action="submit.html" method="post">
+
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="fullname" placeholder="Enter your full name" required><br><br>
+
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email (e.g. abc@example.com)" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+    <label for="course">Course:</label><br>
+    <input type="text" id="course" name="course" placeholder="Enter your course name" required><br><br>
+
+    <label for="year">Year of Study:</label><br>
+    <input type="number" id="year" name="year" placeholder="Enter your year (e.g. 1, 2, 3, 4)" min="1" max="4" required><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" placeholder="Enter your address" rows="4" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+  </form>
+
+  <hr>
+  <center>
+    <p>&copy; Student Registration Form</p>
+  </center>
+
+</body>
+</html>
