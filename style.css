@@ -1,0 +1,38 @@
+.website-header{
+       display: block;
+       background-color: black;
+       color: white;
+       text-align: center;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: large;
+}
+
+.container{
+    padding: 20px;
+    margin: auto;
+    background-color: #E6DFDF;
+    max-width: 400px;
+}
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+.description{
+    font-size: 15px;
+    color: #736D6D;
+}
+.price{
+    display: flex;
+    color: green;
+    font-weight: bold;
+    
+}
+.mrp{
+    text-decoration: line-through;
+    color: #736D6D;
+    
+}
+.button{
+    color: white;
+    background-color:#3385CC;
+} 
