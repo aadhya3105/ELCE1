@@ -8,14 +8,14 @@
 }
 
 .container{
-    padding: 20px;
+    padding: 23px;
     margin: auto;
     background-color: #E6DFDF;
     max-width: 400px;
 }
 .text{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: large;
 }
 .description{
     font-size: 15px;
@@ -25,14 +25,18 @@
     display: flex;
     color: green;
     font-weight: bold;
+    gap: 10px;
     
 }
 .mrp{
     text-decoration: line-through;
-    color: #736D6D;
+    font-weight: lighter;
     
 }
 .button{
     color: white;
-    background-color:#3385CC;
+    background-color: #0C47F0;
+    text-align: center;
+    width: 100%;
+    height: 30px;
 } 
