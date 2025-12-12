@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Course Curriculum</title>
+<body>
+  <h1>Introduction</h1>
+  <p>welcome to the <p style="font-weight: bold;">course curriculum</p>This would include <b>bold</b>,<i>italic</i>,<u>underlined</u> texts, and special characters such as &copy;, &trade;</p>
+    <h2>Subjects 1 semester</h2>
+    <ol>
+       <li>Mathematics</li>
+       <li>programming languages</li>
+       <li>electronics</li>
+    </ol>
+    <h2>Subjects 2 semester</h2>
+    <ul>
+       <li>Python</li>
+       <li>Java<</li>
+       <li>JavaScript</li>
+    </ul>
+    <h2>Modulus</h2>
+    <ol>
+       <li>module 1: basics</li>
+       <ul type="circle">
+           <li>Introduction</li>
+           <li>History</li>
+       </ul>
+        <li>module 2 : programming</li>
+         <ol type = "A">
+               <li>algorithms</li>
+               <li>data types</li>
+         </ol>
+        </body>
+    </head>
+</html>
+  
+
