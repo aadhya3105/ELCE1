@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self Help Books</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Offer bar */
+.offer-bar{
+    background:black;
+    color:white;
+    text-align:center;
+    font-size:14px;
+    padding:5px;
+}
+
+/* Top navbar */
+.top-nav{
+    background:#ffde00;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 30px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.search-box{
+    display:flex;
+    width:45%;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+}
+
+.search-box button{
+    background:black;
+    color:white;
+    border:none;
+    padding:10px 15px;
+}
+
+/* Icons */
+.icons{
+    display:flex;
+    gap:20px;
+    font-size:18px;
+}
+
+/* Menu */
+.menu{
+    background:white;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:12px 0;
+}
+
+.menu a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    font-size:14px;
+}
+
+
+.products{
+    padding:60px 30px;
+    display:flex;
+    justify-content:center;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 220px); 
+    gap:50px 40px;
+}
+
+.product-card{
+    text-align:center;
+    font-size:14px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    height:420px; 
+    margin: 20px;
+}
+
+.product-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:6px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card h4{
+    margin:12px 0 4px;
+    font-weight:500;
+    min-height:36px; /* ensures title spacing */
+}
+
+.product-card .author{
+    font-size:13px;
+    color:#1a4fb5;
+    margin-bottom:6px;
+    
+}
+
+.product-card .price{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.product-card .price del{
+    color:#888;
+    margin-left:5px;
+}
+
+.product-card button{
+    background:white;
+    border:1px solid black;
+    padding:8px 16px;
+    font-size:12px;
+    cursor:pointer;
+}
+
+.home{
+    font-size:13px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+.author{
+    margin-top: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="offer-bar">
+    Flat 15% OFF + Extra 10% OFF — Shop Now!
+</div>
+
+<div class="top-nav">
+    <div class="logo">
+        <img src="crosswordlogo.jpg" width="80">
+        CROSSWORD
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search For Best Fiction Books">
+        <button>🔍</button>
+    </div>
+
+    <div class="icons">
+        👤 🛒
+    </div>
+</div>
+
+<div class="menu">
+    <a href="allbooks.html">ALL BOOKS</a>
+    <a href="top50.html">TOP 50</a>
+    <a href="brands.html">EXCLUSIVE BRANDS</a>
+    <a href="giftcards.html">GIFT CARDS</a>
+    <a href="contacts.html">CONTACT</a>
+</div>
+
+<div class="breadcrumb">
+    <a href="project.html" class="home"> Home › Self Help Books</a>
+</div>
+
+
+<section class="products">
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="atomic.png">
+            <h4>Atmoic Habits</h4>
+            <p class="author">James Clear</p>
+            <p class="price">₹764 <del>₹899</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="ikigai.png">
+            <h4>ikigai</h4>
+            <p class="author">Hector Garcia</p>
+            <p class="price">₹509 <del>₹599</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="doit.png">
+            <h4>Do It Today</h4>
+            <p class="author">Shrijeet Shandilya</p>
+            <p class="price">₹212 <del>₹250</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="think straight.png">
+            <h4>Think St</h4>
+            <p class="author">Darius Foroux</p>
+            <p class="price">₹212<del>₹250</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="build dont.png">
+            <h4>Build Don't Talk</h4>
+            <p class="author">Raj Sharmani</p>
+            <p class="price">₹212 <del>₹250</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="idiots.png">
+            <h4>Surrounded By friends</h4>
+            <p class="author">Thomas Erickson</p>
+            <p class="price">₹509 <del>₹599</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="alcemist.png">
+            <h4>Alcemist</h4>
+            <p class="author"></p>
+            <p class="price">₹509 <del>₹599</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="twisted games.png">
+            <h4>twisted Games</h4>
+            <p class="author">Ana Haung</p>
+            <p class="price">₹509 <del>₹599</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="twisted lies.png">
+            <h4>Twisted Lies</h4>
+            <p class="author">Ana Haung</p>
+            <p class="price">₹339 <del>₹399</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="icebreaker.png">
+            <h4>Icebreaker/h4>
+            <p class="author">Hannah Grace</p>
+            <p class="price">₹339 <del>₹399</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="love.png">
+            <h4>The Love Hypothesis</h4>
+            <p class="author">Ali Hazelwood</p>
+            <p class="price">₹424 <del>₹499</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        <div class="product-card">
+            <img src="better than the movies.png">
+            <h4>Better Than The Movies</h4>
+            <p class="author">Lynn Painter</p>
+            <p class="price">₹424 <del>₹499</del> <span style="color:green;">(15%)</span></p>
+            <button>ADD TO BAG</button>
+        </div>
+
+        
+
+    </div>
+</section>
+</body>
+</html>

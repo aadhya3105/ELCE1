@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crosswords Bookstore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background-color: white; 
+        }
+
+       
+        .offer-bar { 
+            background: black; 
+            color: white; 
+            text-align: center; 
+            font-size: 14px; 
+            padding: 5px; 
+        }
+
+        .top-nav {
+             background: #ffde00; 
+             display: flex; 
+             align-items: center; 
+             justify-content: space-between;
+              padding: 15px 30px;
+            }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            font-weight: bold; font-size: 18px; 
+        }
+        .search-box { 
+            display: flex; 
+            width: 45%; 
+        }
+        .search-box input { 
+            width: 100%; 
+            padding: 10px; 
+            border: none; 
+            outline: none; 
+        }
+        .search-box button {
+             background: black; 
+             color: white; 
+             border: none; 
+             padding: 10px 15px; 
+             cursor: pointer; 
+            }
+        .icons { 
+            display: flex; 
+            gap: 20px; 
+            font-size: 18px; 
+        }
+
+        
+        .menu { 
+            background: white; 
+            display: flex; 
+            justify-content: center; 
+            gap: 40px; 
+            padding: 12px 0; 
+        }
+        .menu a { 
+            text-decoration: none; 
+            color: black; 
+            font-weight: bold; 
+            font-size: 14px; 
+        }
+
+        
+        .banner { 
+            display: flex; 
+            justify-content: center; 
+        }
+        .banner img {
+             width: 100%;
+              max-width: 1500px; 
+            }
+
+        .genre-wrapper { 
+            max-width: 1200px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
+        .section-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 20px; 
+        }
+        .section-title { 
+            font-family: 'Poppins';
+            font-size: 28px; 
+            margin: 0; 
+        }
+        .view-all { 
+            font-size: 13px; 
+            text-decoration: none; 
+            color: black; 
+            font-weight: bold; 
+        }
+        .genre-link {
+            text-decoration: none;
+            color: black; /* Keeps the text color black as defined in your card */
+            display: contents; /* Ensures the link doesn't break the grid layout */
+}
+
+
+        
+        .genre-container, .bestbooks, .children-books {
+            display: grid;
+            grid-template-columns: repeat(5, 180px);
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+       
+        .genre-card, .best-seller-books, .best-children-books {
+            width: 180px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-sizing: border-box; 
+        }
+        .genre-card img, .best-seller-books img, .best-children-books img { 
+            width: 120px; 
+            margin-bottom: 10px; 
+        }
+        .booktitle { 
+            font-weight: bold; 
+            font-size: 14px; 
+            margin: 5px 0; 
+        }
+        .author {
+             font-size: 13px; 
+             color: rgb(67, 150, 153); 
+            }
+        .price { 
+            font-size: 14px; 
+            margin: 8px 0; 
+        }
+        .price span { 
+            text-decoration: line-through; 
+            color: grey; 
+            font-size: 12px;
+         }
+        .price b { 
+            color: green; 
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 10px 16px;
+            border: 1px solid black;
+            background: white;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .banner2{
+            padding-top: 20px;
+        }
+
+        .footer-area {
+             border-top: 1px solid #ddd; 
+             background: #fff; 
+             margin-top: 50px; 
+            }
+        .footer-wrap { 
+             max-width: 1200px; 
+             margin: 0 auto; 
+             padding: 0 20px; 
+            }
+            .footer-newsletter { 
+                padding: 40px 0; 
+                border-bottom: 1px solid #eee; 
+            }
+            .footer-newsletter .footer-wrap { 
+                display: flex; 
+                align-items: center; 
+                justify-content: space-between; 
+            }
+            .news-content h3 { 
+                font-size: 24px;
+                 margin: 0; 
+                 font-family: 'Poppins';
+                }
+            .news-content p { 
+                font-size: 13px; 
+                color: #666; 
+                margin: 5px 0 0 0; 
+                max-width: 400px; 
+            }
+            .news-input {
+                 position: relative; 
+                 width: 350px; 
+                }
+            .news-input input { 
+                width: 100%; 
+                padding: 12px; 
+                border: 1px solid #ccc; 
+                border-radius: 4px; 
+                outline: none; 
+            }
+            .news-input button { 
+                position: absolute; 
+                right: 10px; 
+                top: 8px; 
+                background: none; 
+                border: none; 
+                font-size: 20px; 
+                cursor: pointer; 
+            }
+            .social-links { 
+                display: flex; 
+                align-items: center;
+                 gap: 15px; 
+            }
+            
+            .social-links span {
+                 font-weight: bold; 
+                 font-size: 18px; 
+            }
+            .icon-group { 
+                display: flex; 
+                 gap: 10px; 
+            }
+            .icon-group img { 
+                width: 30px; 
+                height: 30px; 
+                cursor: pointer; 
+            }
+            
+            .footer-links {
+                 padding: 40px 0; 
+            }
+            .grid-5 { 
+                display: grid; 
+                grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; 
+                gap: 30px; 
+            }
+            
+            .col-info p {
+                 font-size: 13px; 
+                 line-height: 1.6; 
+                 color: #444; 
+                 margin-top: 15px; 
+            }
+                
+            .contact { 
+                font-weight: bold; 
+                margin-top: 20px !important; 
+            }
+            
+            .col-links h4 { 
+                font-size: 16px; 
+                margin-bottom: 20px; 
+                position: relative; 
+                padding-bottom: 8px; 
+            }
+            
+            .col-links h4::after { 
+                content: ''; 
+                position: absolute;
+                bottom: 0; 
+                left: 0; 
+                width: 40px; 
+                height: 1px; 
+                background: #eee; 
+            }
+            .col-links ul { 
+                list-style: none; 
+                padding: 0; 
+            }
+            .col-links li { 
+                margin-bottom: 10px; 
+            }
+            
+            .col-links a { 
+                text-decoration: none; 
+                color: #666; 
+                font-size: 13px; 
+            }
+            
+            .searches { 
+                padding: 20px 0; 
+                border-top: 1px 
+                solid #eee; 
+            }
+            
+            .searches p { 
+                font-size: 12px; 
+                line-height: 1.8; 
+                color: #888; 
+            }
+            
+            .searches a { 
+                text-decoration: none; 
+                color: #ff6600; 
+                margin: 0 5px; 
+            }
+            .footer-bottom { 
+                background: #fff; 
+                border-top: 1px solid #eee; 
+                padding: 20px 0; 
+            }
+            .bottom-flex { 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+            }
+            
+            .bottom-flex p { 
+                font-size: 12px; 
+                color: #999; 
+                margin: 0; 
+            }   
+             
+@media (max-width: 768px) {
+    .grid-5 { grid-template-columns: 1fr 1fr; }
+    .footer-newsletter .footer-wrap { flex-direction: column; text-align: center; gap: 20px; }
+}
+    </style>
+</head>
+<body>
+
+    <div class="offer-bar">Flat 15% OFF + Extra 10% OFF — Shop Now!</div>
+
+    <div class="top-nav">
+        <div class="logo"><img src="crosswordlogo.jpg" width="80"> CROSSWORD</div>
+        <div class="search-box">
+            <input type="text" placeholder="Search For Best Fiction Books">
+            <button>🔍</button>
+        </div>
+        <div class="icons">👤 🛒</div>
+    </div>
+
+    <div class="menu">
+        <a href="allbooks.html">ALL BOOKS</a>
+        <a href="top50.html">TOP 50</a>
+        <a href="brands.html">EXCLUSIVE BRANDS</a>
+        <a href="giftcards.html">GIFT CARDS</a>
+        <a href="contacts.html">CONTACT</a>
+    </div>
+
+    <div class="banner"><img src="image.png"></div>
+
+    <div class="genre-wrapper">
+    <h2 class="section-title">Shop By Genre</h2>
+    <div class="genre-container">
+        <a href="romance.html" class="genre-link"><div class="genre-card"><img src="romance.png"><p>Romance</p></div></a>
+        <a href="selfhelp.html" class="genre-link"><div class="genre-card"><img src="selfhelp.png"><p>Self-Help</p></div></a>
+        <a href="finance.html" class="genre-link"><div class="genre-card"><img src="finance.png"><p>Business</p></div></a>
+        <a href="mystery.html" class="genre-link"><div class="genre-card"><img src="mystery.png"><p>Mystery</p></div></a>
+        <a href="mythology.html" class="genre-link"><div class="genre-card"><img src="mythology.png"><p>Mythology</p></div></a>
+        <a href="manga.html" class="genre-link"><div class="genre-card"><img src="manga.png"><p>Manga & Comics</p></div></a>
+        <a href="literature.html" class="genre-link"><div class="genre-card"><img src="literature.png"><p>literature & Fiction</p></div></a>  
+        <a href="biography.html" class="genre-link"><div class="genre-card"><img src="biography.png"><p>Biography & Memoir</p></div></a> 
+        <a href="paranormal.html" class="genre-link"><div class="genre-card"><img src="paranormal.png"><p>Occult & paranormal</p></div></a>   
+        <a href="fantasy.html" class="genre-link"><div class="genre-card"><img src="fantasy.png"><p>Fantasy & Adventure</p></div></a>  
+    </div>
+</div>
+
+    <div class="genre-wrapper">
+        <div class="section-header">
+            <h2 class="section-title">Best Sellers</h2>
+            <a href="viewall.html" class="view-all">VIEW ALL →</a>
+        </div>
+        <div class="bestbooks">
+            <div class="best-seller-books">
+                <img src="psycology.png">
+                <p class="booktitle">The Psychology of Money</p>
+                <p class="author">Morgan Housel</p>
+                <p class="price">₹399 <span>₹399</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-seller-books">
+                <img src="chola.png">
+                <p class="booktitle">The Chola Tigers</p>
+                <p class="author">Amish</p>
+                <p class="price">₹424 <span>₹499</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-seller-books">
+                <img src="ikigai.png">
+                <p class="booktitle">Ikigai</p>
+                <p class="author">Hector Garcia</p>
+                <p class="price">₹509 <span>₹599</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-seller-books">
+                <img src="doit.png">
+                <p class="booktitle">Do It Today</p>
+                <p class="author">Darius Foroux</p>
+                <p class="price">₹212 <span>₹250</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-seller-books">
+                <img src="manifest.png">
+                <p class="booktitle">Manifest</p>
+                <p class="author">Roxie Nafousi</p>
+                <p class="price">₹509 <span>₹599</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="genre-wrapper">
+        <div class="section-header">
+            <h2 class="section-title">Best of Children Books</h2>
+            <a href="children.html" class="view-all">VIEW ALL →</a>
+        </div>
+        <div class="children-books">
+            <div class="best-children-books">
+                <img src="harrypotter.png">
+                <p class="booktitle">Harry Potter</p>
+                <p class="author">J.K Rowling</p>
+                <p class="price">₹679 <span>₹799</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-children-books">
+                <img src="percy.png">
+                <p class="booktitle">Percy Jackson</p>
+                <p class="author">Rick Riordan</p>
+                <p class="price">₹382 <span>₹450</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-children-books">
+                <img src="wimpy kid.png">
+                <p class="booktitle">Diary Of A Wimpy Kid</p>
+                <p class="author">Jeff Kinney</p>
+                <p class="price">₹339 <span>₹599</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-children-books">
+                <img src="magic.png">
+                <p class="booktitle">The Magic Of the Lost Story</p>
+                <p class="author">Sudha Murty</p>
+                <p class="price">₹233 <span>₹275</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+            <div class="best-children-books">
+                <img src="wimpy2.png">
+                <p class="booktitle">Diary Of the Wimpy Kid</p>
+                <p class="author">Jeff Kinney</p>
+                <p class="price">₹339<span>₹399</span> <b>15%</b></p>
+                <button>ADD TO BAG</button>
+            </div>
+        </div>
+        <div class="banner2">
+            <img src="divider.png">
+        </div>
+
+        <div class="banner2">
+            <img src="banner2.png">
+        </div>
+
+        <footer class="footer-area">
+    <div class="footer-newsletter">
+        <div class="footer-wrap">
+            <div class="news-content">
+                <h3>Stay In The Know</h3>
+                <p>Subscribe to our newsletter and stay updated on latest offers, discounts and events near you.</p>
+            </div>
+            <div class="news-input">
+                <input type="email" placeholder="Email id">
+                <button>→</button>
+            </div>
+            <div class="social-links">
+                <span>Follow us</span>
+                <div class="icon-group">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="fb">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="x">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="ig">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <div class="footer-wrap grid-5">
+            <div class="col-info">
+                <div class="footer-logo">
+                   <img src="crosswordlogo.jpg" width="150">
+                </div>
+                <p>Crossword Bookstores draws book lovers of all ages into a community where they can discover great books, engage with booklovers and meet their favourite literary personalities.</p>
+                <p class="contact">
+                    <i class="icon-email">✉</i> estore@crossword.in<br>
+                    <i class="icon-phone">📞</i> +91 8530206759
+                </p>
+            </div>
+
+            <div class="col-links">
+                <h4>Category</h4>
+                <ul>
+                    <li><a href="allbooks.html">Books</a></li>
+                    <li><a href="top50.html">Top 50</a></li>
+                    <li><a href="children.html">Kids Books</a></li>
+                </ul>
+            </div>
+
+            <div class="col-links">
+                <h4>Useful links</h4>
+                <ul>
+                    <li><a href="#">Secure Shopping</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-links">
+                <h4>About us</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Kids Club</a></li>
+                    <li><a href="#">Blogs</a></li>
+                </ul>
+            </div>
+
+            <div class="col-links">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Become a Franchisee</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Track your order</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-wrap searches">
+        <p><strong>Popular Searches :</strong> 
+            <a href="#">Best Books To Read</a> | <a href="#">Romantic Novels</a> | 
+            <a href="#">Motivational Books</a> | <a href="#">Best Fiction Books</a> |
+            <a href="#">Economics Books</a> | <a href="#">Fantasy Books</a> | <a href="#">Mystery Novels</a>
+        </p>
+    </div>
+
+   
+    </div>
+    </footer
+</body>
+</html>
